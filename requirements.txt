@@ -1,1 +1,1 @@
-sphinxcontrib.pdfembed
+sphinxcontrib.pdfembed==0.1
