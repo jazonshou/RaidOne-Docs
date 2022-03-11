@@ -32,7 +32,7 @@ author = 'Jason'
 # ones.
 extensions = [
     'sphinx.ext.autosectionlabel', 
-    'sphinx_tabs.tabs', 
+    # 'sphinx_tabs.tabs', 
     'sphinxcontrib.pdfembed'
 ]
 
