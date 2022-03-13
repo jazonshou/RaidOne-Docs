@@ -22,5 +22,6 @@ Welcome to RaidOne's documentation!
     :titlesonly:
     :caption: Programming
     
+    CodeSetup
     CodeOrganization
     IntroPID
