@@ -31,9 +31,9 @@ author = 'Jason'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autosectionlabel', 
+    'sphinx.ext.autosectionlabel'
     # 'sphinx_tabs.tabs', 
-    'sphinxcontrib.pdfembed'
+    # 'sphinxcontrib.pdfembed'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
