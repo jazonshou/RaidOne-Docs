@@ -7,7 +7,7 @@ autonomously. During the Teleop period, the robot moves according to the user's 
 
 Everything controlled during the auton period is through sequences which can be found here: 
 
-.. figure:: ../images/sequence.png
+.. figure:: ../images/sequence.PNG
 
 Configuring Pathplanner
 =======================
@@ -20,11 +20,11 @@ download Pathplanner `here <https://github.com/mjansen4857/pathplanner/releases>
 To start pathing with Pathplanner, you need to make sure that Pathplanner knows where the root
 of your project is by clicking this button: 
 
-.. figure:: ../images/pathplanner/pathplanner_switch_project.png
+.. figure:: ../images/pathplanner/pathplanner_switch_project.PNG
 
 After you have done this, configure Pathplanner's settings by going over here: 
 
-.. figure:: ../images/pathplanner/settings.png
+.. figure:: ../images/pathplanner/settings.PNG
     :width: 30%
 
 .. note::
@@ -32,14 +32,14 @@ After you have done this, configure Pathplanner's settings by going over here:
 
 Now that Pathplanner is configured, you can start making custom paths. Here is a sample path: 
 
-.. figure:: ../images/pathplanner/sample_path.png
+.. figure:: ../images/pathplanner/sample_path.PNG
     :width: 50%
 
 The green point represents the start, the red point represents the end, and the white point(s) 
 represents the waypoints. When configuring waypoints, you can make precise configurations by 
 altering these values: 
 
-.. figure:: ../images/pathplanner/waypoint.png
+.. figure:: ../images/pathplanner/waypoint.PNG
     :width: 75%
 
 * **X Position** - The x position of the waypoint.
