@@ -87,7 +87,6 @@ This method zeros all sensors.
     When you make a new submodule, you must add it to ``Robot.java``, in this place: 
 
     .. code-block:: java
-        :linenos:
         :emphasize-lines: 6
 
         @Override

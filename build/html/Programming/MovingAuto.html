@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Making the Robot Move Autonomously &mdash; RaidOne  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Introduction to PID" href="IntroPID.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> RaidOne
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted.html">Getting Started</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Electrical</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ElectricalGuide.html">Electrical Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programming</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="CodeSetup.html">Code Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CodeOrganization.html">Code Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MovingTeleop.html">Making the Robot Move in Teleop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IntroPID.html">Introduction to PID</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Making the Robot Move Autonomously</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RaidOne</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Making the Robot Move Autonomously</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Programming/MovingAuto.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="making-the-robot-move-autonomously">
+<h1>Making the Robot Move Autonomously<a class="headerlink" href="#making-the-robot-move-autonomously" title="Permalink to this headline">¶</a></h1>
+<p>There are two periods in a match: Auton and Teleop. During the Auton period, the robot moves
+autonomously. During the Teleop period, the robot moves according to the user’s input.</p>
+<p>Everything controlled during the auton period is through sequences which can be found here:</p>
+<div class="figure align-default">
+<img alt="../_images/sequence.png" src="../_images/sequence.png" />
+</div>
+<div class="section" id="configuring-pathplanner">
+<h2>Configuring Pathplanner<a class="headerlink" href="#configuring-pathplanner" title="Permalink to this headline">¶</a></h2>
+<p>We use Pathplanner to generate trapezoidal motion profiles based on beizer curves. You can
+download Pathplanner <a class="reference external" href="https://github.com/mjansen4857/pathplanner/releases">here</a>.</p>
+<p>To start pathing with Pathplanner, you need to make sure that Pathplanner knows where the root
+of your project is by clicking this button:</p>
+<div class="figure align-default">
+<img alt="../_images/pathplanner_switch_project.png" src="../_images/pathplanner_switch_project.png" />
+</div>
+<p>After you have done this, configure Pathplanner’s settings by going over here:</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/settings.png"><img alt="../_images/settings.png" src="../_images/settings.png" style="width: 30%;" /></a>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always remember to stick with meters for everything (ex. length = m, velocity = m/s, etc)</p>
+</div>
+<p>Now that Pathplanner is configured, you can start making custom paths. Here is a sample path:</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/sample_path.png"><img alt="../_images/sample_path.png" src="../_images/sample_path.png" style="width: 50%;" /></a>
+</div>
+<p>The green point represents the start, the red point represents the end, and the white point(s)
+represents the waypoints. When configuring waypoints, you can make precise configurations by
+altering these values:</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/waypoint.png"><img alt="../_images/waypoint.png" src="../_images/waypoint.png" style="width: 75%;" /></a>
+</div>
+<ul class="simple">
+<li><p><strong>X Position</strong> - The x position of the waypoint.</p></li>
+<li><p><strong>Y Position</strong> - The y position of the waypoint.</p></li>
+<li><p><strong>Heading</strong> - The heading of the waypoint.</p></li>
+<li><p><strong>Vel Override</strong> - The velocity override of the waypoint (basically you can set your own
+desired velocity when the robot reaches that waypoint).</p></li>
+<li><p><strong>Reversal</strong> - Whether or not the robot should reverse when it reaches that waypoint.</p></li>
+</ul>
+</div>
+<div class="section" id="making-the-chassis-follow-the-path">
+<h2>Making the Chassis Follow the Path<a class="headerlink" href="#making-the-chassis-follow-the-path" title="Permalink to this headline">¶</a></h2>
+<p>Now, lets make the robot follow the path. For the sake of demonstration purposes, I will be
+using TestSequence.java to follow the path.</p>
+<p>First, you must load the path into the sequence with this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Trajectory</span> <span class="n">MY_PATH</span> <span class="o">=</span> <span class="n">PathPlanner</span><span class="p">.</span><span class="na">loadPath</span><span class="p">(</span><span class="s">&quot;PATH_NAME&quot;</span><span class="p">,</span> <span class="n">AutoConstants</span><span class="p">.</span><span class="na">MAX_VEL</span><span class="p">,</span> <span class="n">AutoConstants</span><span class="p">.</span><span class="na">MAX_ACCEL</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Change PATH_NAME to the name of the path you want to load.</p>
+</div>
+<p>Next, you need to make the chassis follow the path like this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">sequence</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">addAction</span><span class="p">(</span><span class="k">new</span> <span class="n">SeriesAction</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="hll">        <span class="k">new</span> <span class="n">DrivePath</span><span class="p">(</span><span class="n">MY_PATH</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+</span>    <span class="p">)));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>addAction</strong> - This is the method that adds the action to the sequence.</p></li>
+<li><p><strong>SeriesAction</strong> - This is the action allows you to string different actions together.
+though in this case, we only have one action, the DrivePath.</p></li>
+<li><p><strong>DrivePath</strong> - This is the action that actually drives the robot. The first argument is the
+path you want to follow. The second argument is whether or not the path is the first path.
+this is necessary as it determines whether or not the robot should reset its odometry.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The pathing assumes that everything is global which means if your first path goes from
+point A to point B, your second path MUST start from point B.</p>
+</div>
+</div>
+<div class="section" id="moving-the-robot">
+<h2>Moving the Robot<a class="headerlink" href="#moving-the-robot" title="Permalink to this headline">¶</a></h2>
+<p>After deploying the code, go to the “Main” tab in shuffleboard and select Test Sequence (or
+whatever you named your sequence). When you press ENABLE, the robot will follow the path.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must shout “ENABLED” loud and clear when you enable the robot. If you do not, consequences
+will follow. This is for your wellbeing and safety.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="IntroPID.html" class="btn btn-neutral float-left" title="Introduction to PID" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Jason.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

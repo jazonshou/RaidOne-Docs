@@ -22,6 +22,8 @@ Welcome to RaidOne's documentation!
     :titlesonly:
     :caption: Programming
     
-    CodeSetup
-    CodeOrganization
-    IntroPID
+    Programming/CodeSetup
+    Programming/CodeOrganization
+    Programming/MovingTeleop
+    Programming/IntroPID
+    Programming/MovingAuto
