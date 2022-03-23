@@ -15,8 +15,15 @@ in WPIlib's VSCode. If random prompts pop up, use common sense and answer them.
 Installing Vendor Libraries
 ===========================
 
-Ctrl + Shift + P --> Manage Vendor Libraries --> Install new libraries (offline) --> click the 
-checkboxes
+CTRE and (maybe) REV (aka. Offline installation): 
+
+* Ctrl + Shift + P --> Manage Vendor Libraries --> Install new libraries (offline) --> click the 
+  correct checkbox(es)
+
+Pathplanner (aka. Online installation): 
+
+* Ctrl + Shift + P --> Manage Vendor Libraries --> Install new libraries (online) --> give it the 
+  link found `here <https://github.com/mjansen4857/pathplanner/wiki/PathPlannerLib:-Installing>`_
 
 Configuring Motor Controllers & Sensors
 =======================================

@@ -41,6 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Oh no! The bot doesn’t move!" href="Tuning.html" />
     <link rel="prev" title="Introduction to PID" href="IntroPID.html" /> 
 </head>
 
@@ -101,6 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="MovingTeleop.html">Making the Robot Move in Teleop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="IntroPID.html">Introduction to PID</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Making the Robot Move Autonomously</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tuning.html">Oh no! The bot doesn’t move!</a></li>
 </ul>
 
             
@@ -174,7 +176,7 @@
 autonomously. During the Teleop period, the robot moves according to the user’s input.</p>
 <p>Everything controlled during the auton period is through sequences which can be found here:</p>
 <div class="figure align-default">
-<img alt="../_images/sequence.png" src="../_images/sequence.png" />
+<img alt="../_images/sequence.PNG" src="../_images/sequence.PNG" />
 </div>
 <div class="section" id="configuring-pathplanner">
 <h2>Configuring Pathplanner<a class="headerlink" href="#configuring-pathplanner" title="Permalink to this headline">¶</a></h2>
@@ -183,11 +185,11 @@ download Pathplanner <a class="reference external" href="https://github.com/mjan
 <p>To start pathing with Pathplanner, you need to make sure that Pathplanner knows where the root
 of your project is by clicking this button:</p>
 <div class="figure align-default">
-<img alt="../_images/pathplanner_switch_project.png" src="../_images/pathplanner_switch_project.png" />
+<img alt="../_images/pathplanner_switch_project.PNG" src="../_images/pathplanner_switch_project.PNG" />
 </div>
 <p>After you have done this, configure Pathplanner’s settings by going over here:</p>
 <div class="figure align-default">
-<a class="reference internal image-reference" href="../_images/settings.png"><img alt="../_images/settings.png" src="../_images/settings.png" style="width: 30%;" /></a>
+<a class="reference internal image-reference" href="../_images/settings.PNG"><img alt="../_images/settings.PNG" src="../_images/settings.PNG" style="width: 30%;" /></a>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -195,13 +197,13 @@ of your project is by clicking this button:</p>
 </div>
 <p>Now that Pathplanner is configured, you can start making custom paths. Here is a sample path:</p>
 <div class="figure align-default">
-<a class="reference internal image-reference" href="../_images/sample_path.png"><img alt="../_images/sample_path.png" src="../_images/sample_path.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../_images/sample_path.PNG"><img alt="../_images/sample_path.PNG" src="../_images/sample_path.PNG" style="width: 50%;" /></a>
 </div>
 <p>The green point represents the start, the red point represents the end, and the white point(s)
 represents the waypoints. When configuring waypoints, you can make precise configurations by
 altering these values:</p>
 <div class="figure align-default">
-<a class="reference internal image-reference" href="../_images/waypoint.png"><img alt="../_images/waypoint.png" src="../_images/waypoint.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="../_images/waypoint.PNG"><img alt="../_images/waypoint.PNG" src="../_images/waypoint.PNG" style="width: 75%;" /></a>
 </div>
 <ul class="simple">
 <li><p><strong>X Position</strong> - The x position of the waypoint.</p></li>
@@ -224,6 +226,12 @@ using TestSequence.java to follow the path.</p>
 <p class="admonition-title">Note</p>
 <p>Change PATH_NAME to the name of the path you want to load.</p>
 </div>
+<div class="section" id="hold-on-wait-a-minute">
+<h3>Hold on, wait a minute…<a class="headerlink" href="#hold-on-wait-a-minute" title="Permalink to this headline">¶</a></h3>
+<p>What is a Trajectory I hear you ask? Well thanks for asking, I love wonderful questions like that!
+A trajectory is basically a giant list of waypoints. Well… what are waypoints? Another excellent
+question! Waypoints describe the desired state of the robot during a path (ex. Desired velocity,
+acceleration, position, etc).</p>
 <p>Next, you need to make the chassis follow the path like this:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sequence</span><span class="p">()</span> <span class="p">{</span>
@@ -247,6 +255,7 @@ this is necessary as it determines whether or not the robot should reset its odo
 point A to point B, your second path MUST start from point B.</p>
 </div>
 </div>
+</div>
 <div class="section" id="moving-the-robot">
 <h2>Moving the Robot<a class="headerlink" href="#moving-the-robot" title="Permalink to this headline">¶</a></h2>
 <p>After deploying the code, go to the “Main” tab in shuffleboard and select Test Sequence (or
@@ -265,6 +274,7 @@ will follow. This is for your wellbeing and safety.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Tuning.html" class="btn btn-neutral float-right" title="Oh no! The bot doesn’t move!" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="IntroPID.html" class="btn btn-neutral float-left" title="Introduction to PID" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

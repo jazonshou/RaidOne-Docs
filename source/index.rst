@@ -27,3 +27,4 @@ Welcome to RaidOne's documentation!
     Programming/MovingTeleop
     Programming/IntroPID
     Programming/MovingAuto
+    Programming/Tuning

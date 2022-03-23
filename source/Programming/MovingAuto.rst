@@ -66,6 +66,14 @@ First, you must load the path into the sequence with this:
 .. note::
     Change PATH_NAME to the name of the path you want to load.
 
+Hold on, wait a minute...
+-------------------------
+
+What is a Trajectory I hear you ask? Well thanks for asking, I love wonderful questions like that!
+A trajectory is basically a giant list of waypoints. Well... what are waypoints? Another excellent 
+question! Waypoints describe the desired state of the robot during a path (ex. Desired velocity, 
+acceleration, position, etc).
+
 Next, you need to make the chassis follow the path like this: 
 
 .. code-block:: java

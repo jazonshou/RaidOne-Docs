@@ -20,5 +20,5 @@ While testing these features, make sure that the encoder values also correspond 
 robot is moving. If that is not the case, reverse the encoders/motors in ``Chassis.java``. You 
 can read encoder readings in shuffleboard. 
 
-.. figure:: ../images/shuffleboard.png
+.. figure:: ../images/shuffleboard.PNG
     :width: 75%
