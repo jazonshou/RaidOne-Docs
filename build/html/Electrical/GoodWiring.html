@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Making the Robot Move in Teleop &mdash; RaidOne  documentation</title>
+  <title>Good Wiring Examples &mdash; RaidOne  documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to PID" href="IntroPID.html" />
-    <link rel="prev" title="Code Organization" href="CodeOrganization.html" /> 
+    <link rel="next" title="Code Setup" href="../Programming/CodeSetup.html" />
+    <link rel="prev" title="Electrical Guide" href="ElectricalGuide.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,18 +92,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../GettingStarted.html">Getting Started</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Electrical</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Electrical/ElectricalGuide.html">Electrical Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Electrical/GoodWiring.html">Good Wiring Examples</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ElectricalGuide.html">Electrical Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Good Wiring Examples</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programming</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="CodeSetup.html">Code Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CodeOrganization.html">Code Organization</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Making the Robot Move in Teleop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IntroPID.html">Introduction to PID</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MovingAuto.html">Making the Robot Move Autonomously</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tuning.html">Oh no! The bot doesn’t move!</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Programming/CodeSetup.html">Code Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programming/CodeOrganization.html">Code Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programming/MovingTeleop.html">Making the Robot Move in Teleop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programming/IntroPID.html">Introduction to PID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programming/MovingAuto.html">Making the Robot Move Autonomously</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programming/Tuning.html">Oh no! The bot doesn’t move!</a></li>
 </ul>
 
             
@@ -152,13 +152,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Making the Robot Move in Teleop</li>
+      <li>Good Wiring Examples</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/Programming/MovingTeleop.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Electrical/GoodWiring.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,25 +171,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="making-the-robot-move-in-teleop">
-<h1>Making the Robot Move in Teleop<a class="headerlink" href="#making-the-robot-move-in-teleop" title="Permalink to this headline">¶</a></h1>
-<p>Open up shuffleboard and driver station and enable the robot.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>BUT WAIT!!! MAKE SURE THERE IS NO ONE NEAR THE ROBOT WHEN YOU ENABLE. WHEN YOU DO ENABLE,
-SHOUT “ENABLED” LOUD AND CLEAR TO MAKE SURE EVERYONE AROUND KNOWS THAT THE ROBOT IS ENABLED.
-THIS IS A VERY IMPORTANT SAFETY PRECAUTION. IF YOU FAIL TO FOLLOW THESE SIMPLE RULES,
-SEVERE CONSEQUENCES WILL FOLLOW. YOU HAVE BEEN WARNED.</strong></p>
+  <div class="section" id="good-wiring-examples">
+<h1>Good Wiring Examples<a class="headerlink" href="#good-wiring-examples" title="Permalink to this headline">¶</a></h1>
+<p>Only the most skilled electricians can master good wiring.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/862_wiring.PNG"><img alt="../_images/862_wiring.PNG" src="../_images/862_wiring.PNG" style="width: 604.8px; height: 453.59999999999997px;" /></a>
+<p class="caption"><span class="caption-text"><em>Team 862 Wiring</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>Make sure that when you push the left joystick forward, the robot moves forward, and when you
-push the left joystick backwards, the robot moves backward. As for turning, when the right
-joystick is pushed left, the robot turns left, and when the right joystick is pushed right, the
-robot turns right.</p>
-<p>While testing these features, make sure that the encoder values also correspond to the way the
-robot is moving. If that is not the case, reverse the encoders/motors in <code class="docutils literal notranslate"><span class="pre">Chassis.java</span></code>. You
-can read encoder readings in shuffleboard.</p>
-<div class="figure align-default">
-<a class="reference internal image-reference" href="../_images/shuffleboard.PNG"><img alt="../_images/shuffleboard.PNG" src="../_images/shuffleboard.PNG" style="width: 75%;" /></a>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/4817_wiring.PNG"><img alt="../_images/4817_wiring.PNG" src="../_images/4817_wiring.PNG" style="width: 379.75px; height: 366.0px;" /></a>
+<p class="caption"><span class="caption-text"><em>Team 4817 Wiring</em></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 
@@ -199,8 +190,8 @@ can read encoder readings in shuffleboard.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="IntroPID.html" class="btn btn-neutral float-right" title="Introduction to PID" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="CodeOrganization.html" class="btn btn-neutral float-left" title="Code Organization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Programming/CodeSetup.html" class="btn btn-neutral float-right" title="Code Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ElectricalGuide.html" class="btn btn-neutral float-left" title="Electrical Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

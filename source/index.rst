@@ -16,7 +16,8 @@ Welcome to RaidOne's documentation!
     :titlesonly:
     :caption: Electrical
 
-    ElectricalGuide
+    Electrical/ElectricalGuide
+    Electrical/GoodWiring
 
 .. toctree::
     :titlesonly:
