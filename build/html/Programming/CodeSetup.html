@@ -103,7 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="MovingTeleop.html">Making the Robot Move in Teleop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="IntroPID.html">Introduction to PID</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MovingAuto.html">Making the Robot Move Autonomously</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tuning.html">Oh no! The bot doesn’t move!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tuning.html">Tuning</a></li>
 </ul>
 
             
@@ -176,7 +176,7 @@
 <div class="section" id="raid-one-template">
 <h2>Raid One Template<a class="headerlink" href="#raid-one-template" title="Permalink to this headline">¶</a></h2>
 <p>Download the code from <a class="reference external" href="https://github.com/TASRobotics/RaidOne-FRC-Template">here</a> and open it
-in WPIlib’s VSCode. If random prompts pop up, use common sense and answer them.</p>
+in WPIlib’s VSCode. It a prompt tells you to update, update.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Make sure that the code is not being backed up with Google Drive or Onedrive because it
@@ -185,7 +185,7 @@ screws things up.</p>
 </div>
 <div class="section" id="installing-vendor-libraries">
 <h2>Installing Vendor Libraries<a class="headerlink" href="#installing-vendor-libraries" title="Permalink to this headline">¶</a></h2>
-<p>CTRE and (maybe) REV (aka. Offline installation):</p>
+<p>CTRE and REV (aka. Offline installation):</p>
 <ul class="simple">
 <li><p>Ctrl + Shift + P –&gt; Manage Vendor Libraries –&gt; Install new libraries (offline) –&gt; click the
 correct checkbox(es)</p></li>
@@ -200,10 +200,12 @@ link found <a class="reference external" href="https://github.com/mjansen4857/pa
 <h2>Configuring Motor Controllers &amp; Sensors<a class="headerlink" href="#configuring-motor-controllers-sensors" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Update the firmware</p></li>
-<li><p>Configure the CAN ID’s of the motor controllers and sensors</p></li>
+<li><p>For REV devices, open REV Hardware Client and connect a Spark Max to your laptop. For CTRE devices,
+open Phoenix tuner, connect the Roborio to your laptop, and click “Run Temporary Diagnostic Server”</p></li>
+<li><p>Configure the CAN ID’s of the motor controllers and sensors (this assumes you have already
+wired the robot)</p></li>
 </ol>
-<div class="section" id="how-you-might-ask-rtfm-read-the-fun-manuals">
-<h3>How you might ask? RTFM (Read the Fun Manuals):<a class="headerlink" href="#how-you-might-ask-rtfm-read-the-fun-manuals" title="Permalink to this headline">¶</a></h3>
+<p>If You don’t have something mentioned above, download them at the links below</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.revrobotics.com/sparkmax/">REV</a></p></li>
 <li><p><a class="reference external" href="https://docs.ctre-phoenix.com/en/stable/">CTRE</a></p></li>
@@ -213,7 +215,6 @@ link found <a class="reference external" href="https://github.com/mjansen4857/pa
 <p>When configuring CAN ID’s, you must do it 1 by 1 if they are new. Otherwise, the CAN
 will think that all your devices are the same thing as they will be under the same
 CAN ID.</p>
-</div>
 </div>
 <div class="section" id="top-5-ways-of-knowing-you-screwed-up">
 <h3>Top 5 ways of knowing you screwed up:<a class="headerlink" href="#top-5-ways-of-knowing-you-screwed-up" title="Permalink to this headline">¶</a></h3>
@@ -231,8 +232,8 @@ all your devices have the same ID)</p></li>
 </div>
 <div class="section" id="setting-can-id-s-in-code">
 <h2>Setting CAN ID’s in Code<a class="headerlink" href="#setting-can-id-s-in-code" title="Permalink to this headline">¶</a></h2>
-<p>Now that your CAN is happy, go to <code class="docutils literal notranslate"><span class="pre">Constants.java</span></code> and change the CAN ID’s to match the ID’s
-you set in the previous step.</p>
+<p>Now that your CAN is happy, go to <code class="docutils literal notranslate"><span class="pre">Constants.java</span></code> (from the template downloaded previously)
+and change the CAN ID’s to match the ID’s you set in the previous step.</p>
 </div>
 </div>
 

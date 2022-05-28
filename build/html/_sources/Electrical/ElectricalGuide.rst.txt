@@ -10,27 +10,28 @@ vibrations.
 Electrical Layout
 =================
 
-.. figure:: images/frc-control-system-layout-rev.svg
+.. figure:: ../images/frc-control-system-layout-rev.svg
     :alt: Electrical Layout
     :width: 750
 
 Redundancy
 ==========
 
-Try to make things that can be redundant, redundant. For instance, the radio can be powered in 2
-different ways. One way is through the barrel power jack, another way is through POE. In scenarios
-like this, it is better practice to power the radio through POE AND the barrel power jack in case 
-one power source is ever disconnected (P.S. Raid One was frozen for ~2 matches because of a radio
-issue... although it wasn't related to a power issue, this still shows how important it is to keep 
-the radio safe)
+Try to make things redundant. For instance, the radio can be powered in 2 different ways. 
+One way is through the barrel power jack. Another way is through POE (power over ethernet). 
+In scenarios like this, it is better practice powering the radio through POE AND the barrel 
+power jack in case one power source is ever disconnected (P.S. Raid One was frozen for ~2 
+matches because of a radio issue… although it wasn’t related to a power issue, this still 
+shows how important it is to keep the radio safe).
+
 
 CAN Protection
 ==============
 
-In some ways, CAN is your best friend because it opens a realm of near-limitless freedom to
-programmers. On the other hand, since all CAN devices are connected through a daisy chain, 
-one bad connection can cause the disconnection of all other CAN devices down the line. Thus, 
-here are some ways to protect your CAN devices: 
+In some ways, CAN is your best friend because it opens a realm of near-limitless freedom 
+to programmers. On the other hand, since all CAN devices are daisy chained, one poor connection 
+can cause the disconnection of all other CAN devices down the line. Thus, here are some ways 
+to protect your CAN devices:
 
 * Keep the drive train motor controllers at the front of the CAN bus 
 * Use CANivore's to create seperate CAN buses that can connect directly to the USB protect on

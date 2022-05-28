@@ -11,7 +11,7 @@ Submodules
 Every submodule in should be organized in its own class which inherits from the Submodule 
 class. For your custom features to work, you need to override methods from the Submodule class
 and create your custom features. Here are brief explainations of what each method in 
-submodule do: 
+submodule does: 
 
 On Init
 *******

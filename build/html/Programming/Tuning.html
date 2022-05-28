@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Oh no! The bot doesn’t move! &mdash; RaidOne  documentation</title>
+  <title>Tuning &mdash; RaidOne  documentation</title>
   
 
   
@@ -102,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="MovingTeleop.html">Making the Robot Move in Teleop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="IntroPID.html">Introduction to PID</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MovingAuto.html">Making the Robot Move Autonomously</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Oh no! The bot doesn’t move!</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tuning</a></li>
 </ul>
 
             
@@ -151,7 +151,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Oh no! The bot doesn’t move!</li>
+      <li>Tuning</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,9 +170,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="oh-no-the-bot-doesn-t-move">
-<h1>Oh no! The bot doesn’t move!<a class="headerlink" href="#oh-no-the-bot-doesn-t-move" title="Permalink to this headline">¶</a></h1>
-<p>Oh no, so sad, truly some unfortunate news… luckily for you, the bot was not supposed to move!</p>
+  <div class="section" id="tuning">
+<h1>Tuning<a class="headerlink" href="#tuning" title="Permalink to this headline">¶</a></h1>
+<p>Oh no! The bot doesn’t move! That’s because you need to tune.</p>
 <div class="section" id="setting-up-the-code">
 <h2>Setting up the code:<a class="headerlink" href="#setting-up-the-code" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
@@ -223,17 +223,13 @@ even better.</p>
 <p class="admonition-title">Note</p>
 <p>It is okay if the robot does not drive straight. We will correct this later on.</p>
 </div>
-<p>Wow, now that you are done tuning, life is good because now you can basically make the chassis
-follow any path!</p>
-<p>Wait, but the robot doesn’t drive straight…?</p>
 </div>
-<div class="section" id="adding-the-secret-sauce-aka-ramsete">
-<h2>Adding the Secret Sauce (aka. Ramsete)<a class="headerlink" href="#adding-the-secret-sauce-aka-ramsete" title="Permalink to this headline">¶</a></h2>
-<p>What Ramsete does is that it looks at the robot’s current position and corrects its velocities
-based on the readed position. Though, there’s a reason why this is called the “Secret Sauce.”
-Although Ramsete makes your paths extremely accurate, the math does not add up.</p>
-<img alt="../_images/ramsete.jpg" src="../_images/ramsete.jpg" />
-<p>“If it works it works”</p>
+<div class="section" id="correcting-for-positional-error">
+<h2>Correcting for Positional Error:<a class="headerlink" href="#correcting-for-positional-error" title="Permalink to this headline">¶</a></h2>
+<p>What RAMSETE, a nonlinear state-space feedback controller, does is that it looks at the robot’s
+current position and corrects its velocities based on the calculated error.</p>
+<p>To add RAMSETE, go to <code class="docutils literal notranslate"><span class="pre">TrajectoryFollower.java</span></code>, and uncomment line 61 and comment line 62.</p>
+<p>…. image:: ../images/ramsete.jpg</p>
 </div>
 </div>
 

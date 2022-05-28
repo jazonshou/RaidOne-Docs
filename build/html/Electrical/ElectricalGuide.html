@@ -103,7 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Programming/MovingTeleop.html">Making the Robot Move in Teleop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Programming/IntroPID.html">Introduction to PID</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Programming/MovingAuto.html">Making the Robot Move Autonomously</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Programming/Tuning.html">Oh no! The bot doesn’t move!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programming/Tuning.html">Tuning</a></li>
 </ul>
 
             
@@ -180,24 +180,24 @@ vibrations.</p>
 <div class="section" id="electrical-layout">
 <h2>Electrical Layout<a class="headerlink" href="#electrical-layout" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default">
-<a class="reference internal image-reference" href="Electrical/images/frc-control-system-layout-rev.svg"><img alt="Electrical Layout" src="Electrical/images/frc-control-system-layout-rev.svg" width="750" /></a>
+<a class="reference internal image-reference" href="../_images/frc-control-system-layout-rev.svg"><img alt="Electrical Layout" src="../_images/frc-control-system-layout-rev.svg" width="750" /></a>
 </div>
 </div>
 <div class="section" id="redundancy">
 <h2>Redundancy<a class="headerlink" href="#redundancy" title="Permalink to this headline">¶</a></h2>
-<p>Try to make things that can be redundant, redundant. For instance, the radio can be powered in 2
-different ways. One way is through the barrel power jack, another way is through POE. In scenarios
-like this, it is better practice to power the radio through POE AND the barrel power jack in case
-one power source is ever disconnected (P.S. Raid One was frozen for ~2 matches because of a radio
-issue… although it wasn’t related to a power issue, this still shows how important it is to keep
-the radio safe)</p>
+<p>Try to make things redundant. For instance, the radio can be powered in 2 different ways.
+One way is through the barrel power jack. Another way is through POE (power over ethernet).
+In scenarios like this, it is better practice powering the radio through POE AND the barrel
+power jack in case one power source is ever disconnected (P.S. Raid One was frozen for ~2
+matches because of a radio issue… although it wasn’t related to a power issue, this still
+shows how important it is to keep the radio safe).</p>
 </div>
 <div class="section" id="can-protection">
 <h2>CAN Protection<a class="headerlink" href="#can-protection" title="Permalink to this headline">¶</a></h2>
-<p>In some ways, CAN is your best friend because it opens a realm of near-limitless freedom to
-programmers. On the other hand, since all CAN devices are connected through a daisy chain,
-one bad connection can cause the disconnection of all other CAN devices down the line. Thus,
-here are some ways to protect your CAN devices:</p>
+<p>In some ways, CAN is your best friend because it opens a realm of near-limitless freedom
+to programmers. On the other hand, since all CAN devices are daisy chained, one poor connection
+can cause the disconnection of all other CAN devices down the line. Thus, here are some ways
+to protect your CAN devices:</p>
 <ul class="simple">
 <li><p>Keep the drive train motor controllers at the front of the CAN bus</p></li>
 <li><p>Use CANivore’s to create seperate CAN buses that can connect directly to the USB protect on

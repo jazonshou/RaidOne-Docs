@@ -1,8 +1,8 @@
-############################
-Oh no! The bot doesn't move!
-############################
+######
+Tuning
+######
 
-Oh no, so sad, truly some unfortunate news... luckily for you, the bot was not supposed to move!
+Oh no! The bot doesn't move! That's because you need to tune. 
 
 Setting up the code:
 ====================
@@ -62,19 +62,13 @@ even better.
 .. note:: 
     It is okay if the robot does not drive straight. We will correct this later on. 
 
-Wow, now that you are done tuning, life is good because now you can basically make the chassis 
-follow any path!
+Correcting for Positional Error:
+================================
+
+What RAMSETE, a nonlinear state-space feedback controller, does is that it looks at the robot's 
+current position and corrects its velocities based on the calculated error. 
 
 
-Wait, but the robot doesn't drive straight...? 
+To add RAMSETE, go to ``TrajectoryFollower.java``, and uncomment line 61 and comment line 62. 
 
-Adding the Secret Sauce (aka. Ramsete)
-======================================
-
-What Ramsete does is that it looks at the robot's current position and corrects its velocities
-based on the readed position. Though, there's a reason why this is called the "Secret Sauce." 
-Although Ramsete makes your paths extremely accurate, the math does not add up. 
-
-.. image:: ../images/ramsete.jpg
-
-"If it works it works"
+.... image:: ../images/ramsete.jpg
