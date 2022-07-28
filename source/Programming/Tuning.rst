@@ -65,10 +65,10 @@ even better.
 Correcting for Positional Error:
 ================================
 
-What RAMSETE, a nonlinear state-space feedback controller, does is that it looks at the robot's 
+What RAMSETE (a nonlinear state-space feedback controller) does is that it looks at the robot's 
 current position and corrects its velocities based on the calculated error. 
 
 
 To add RAMSETE, go to ``TrajectoryFollower.java``, and uncomment line 61 and comment line 62. 
 
-.... image:: ../images/ramsete.jpg
+.. image:: ../images/ramsete.jpg

@@ -20,9 +20,7 @@ Redundancy
 Try to make things redundant. For instance, the radio can be powered in 2 different ways. 
 One way is through the barrel power jack. Another way is through POE (power over ethernet). 
 In scenarios like this, it is better practice powering the radio through POE AND the barrel 
-power jack in case one power source is ever disconnected (P.S. Raid One was frozen for ~2 
-matches because of a radio issue… although it wasn’t related to a power issue, this still 
-shows how important it is to keep the radio safe).
+power jack in case one power source is ever disconnected.
 
 
 CAN Protection
