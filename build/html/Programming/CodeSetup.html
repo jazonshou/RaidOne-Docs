@@ -175,22 +175,22 @@
 <h1>Code Setup<a class="headerlink" href="#code-setup" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="raid-one-template">
 <h2>Raid One Template<a class="headerlink" href="#raid-one-template" title="Permalink to this headline">¶</a></h2>
-<p>Download the code from <a class="reference external" href="https://github.com/TASRobotics/RaidOne-FRC-Template">here</a> and open it
-in WPIlib’s VSCode. It a prompt tells you to update, update.</p>
+<p>Download the Raid One code template from <a class="reference external" href="https://github.com/TASRobotics/RaidOne-FRC-Template">here</a>
+and open it in WPILib’s VSCode (download <a class="reference external" href="https://github.com/wpilibsuite/allwpilib/releases">here</a>).
+If a prompt tells you to update, update.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Make sure that the code is not being backed up with Google Drive or Onedrive because it
-screws things up.</p>
+<p>Make sure your code is not backed up with Google Drive or Onedrive.</p>
 </div>
 </div>
 <div class="section" id="installing-vendor-libraries">
 <h2>Installing Vendor Libraries<a class="headerlink" href="#installing-vendor-libraries" title="Permalink to this headline">¶</a></h2>
-<p>CTRE and REV (aka. Offline installation):</p>
+<p>CTRE and REV (Offline installation):</p>
 <ul class="simple">
 <li><p>Ctrl + Shift + P –&gt; Manage Vendor Libraries –&gt; Install new libraries (offline) –&gt; click the
 correct checkbox(es)</p></li>
 </ul>
-<p>Pathplanner (aka. Online installation):</p>
+<p>Pathplanner (Online installation):</p>
 <ul class="simple">
 <li><p>Ctrl + Shift + P –&gt; Manage Vendor Libraries –&gt; Install new libraries (online) –&gt; give it the
 link found <a class="reference external" href="https://github.com/mjansen4857/pathplanner/wiki/PathPlannerLib:-Installing">here</a></p></li>
@@ -216,17 +216,15 @@ wired the robot)</p></li>
 will think that all your devices are the same thing as they will be under the same
 CAN ID.</p>
 </div>
-<div class="section" id="top-5-ways-of-knowing-you-screwed-up">
-<h3>Top 5 ways of knowing you screwed up:<a class="headerlink" href="#top-5-ways-of-knowing-you-screwed-up" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="possible-issues-you-may-encounter">
+<h3>Possible issues you may encounter<a class="headerlink" href="#possible-issues-you-may-encounter" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>The CAN devices are blinking weird colors (probably a connection issue)</p></li>
 <li><p>You can’t see all your devices in Phoneix Tuner or the REV hardware client (probably also
 a connection issue)</p></li>
-<li><p>Phoenix Tuner thinks your Talon FX’s are Talon SRX’s (that’s how you know your firmware is
-way too old)</p></li>
+<li><p>Phoenix Tuner confuses your motor controllers with older motor controllers (firmware too old)</p></li>
 <li><p>Only one devices shows up in Phoenix Tuner even though your CAN bus looks happy (this means
 all your devices have the same ID)</p></li>
-<li><p>You smell something burning (well that sucks)</p></li>
 </ol>
 </div>
 </div>

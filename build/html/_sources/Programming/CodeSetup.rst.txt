@@ -5,22 +5,22 @@ Code Setup
 Raid One Template
 =================
 
-Download the code from `here <https://github.com/TASRobotics/RaidOne-FRC-Template>`_ and open it
-in WPIlib's VSCode. It a prompt tells you to update, update. 
+Download the Raid One code template from `here <https://github.com/TASRobotics/RaidOne-FRC-Template>`_ 
+and open it in WPILib's VSCode (download `here <https://github.com/wpilibsuite/allwpilib/releases>`_). 
+If a prompt tells you to update, update. 
 
 .. note::
-    Make sure that the code is not being backed up with Google Drive or Onedrive because it 
-    screws things up. 
+    Make sure your code is not backed up with Google Drive or Onedrive. 
 
 Installing Vendor Libraries
 ===========================
 
-CTRE and REV (aka. Offline installation): 
+CTRE and REV (Offline installation): 
 
 * Ctrl + Shift + P --> Manage Vendor Libraries --> Install new libraries (offline) --> click the 
   correct checkbox(es)
 
-Pathplanner (aka. Online installation): 
+Pathplanner (Online installation): 
 
 * Ctrl + Shift + P --> Manage Vendor Libraries --> Install new libraries (online) --> give it the 
   link found `here <https://github.com/mjansen4857/pathplanner/wiki/PathPlannerLib:-Installing>`_
@@ -44,17 +44,15 @@ If You don't have something mentioned above, download them at the links below
     will think that all your devices are the same thing as they will be under the same 
     CAN ID. 
 
-Top 5 ways of knowing you screwed up:
--------------------------------------
+Possible issues you may encounter
+---------------------------------
 
 1. The CAN devices are blinking weird colors (probably a connection issue)
 2. You can't see all your devices in Phoneix Tuner or the REV hardware client (probably also 
    a connection issue)
-3. Phoenix Tuner thinks your Talon FX's are Talon SRX's (that's how you know your firmware is 
-   way too old)
+3. Phoenix Tuner confuses your motor controllers with older motor controllers (firmware too old)
 4. Only one devices shows up in Phoenix Tuner even though your CAN bus looks happy (this means 
    all your devices have the same ID)
-5. You smell something burning (well that sucks)
 
 Setting CAN ID's in Code
 ========================

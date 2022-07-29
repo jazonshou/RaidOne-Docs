@@ -15,8 +15,6 @@ Configuring Pathplanner
 We use Pathplanner to generate trapezoidal motion profiles based on beizer curves. You can 
 download Pathplanner `here <https://github.com/mjansen4857/pathplanner/releases>`_.
 
-
-
 To start pathing with Pathplanner, you need to make sure that Pathplanner knows where the root
 of your project is by clicking this button: 
 
@@ -61,18 +59,20 @@ First, you must load the path into the sequence with this:
 
 .. code-block:: java
 
-    private static final Trajectory MY_PATH = PathPlanner.loadPath("PATH_NAME", AutoConstants.MAX_VEL, AutoConstants.MAX_ACCEL);
+    private static final Trajectory MY_PATH = 
+        PathPlanner.loadPath("PATH_NAME", AutoConstants.MAX_VEL, AutoConstants.MAX_ACCEL);
 
 .. note::
-    Change PATH_NAME to the name of the path you want to load.
+    Change ``PATH_NAME`` to the name of the path you want to load.
 
-Hold on, wait a minute...
--------------------------
+What is a trajectory?
+---------------------
 
-What is a Trajectory I hear you ask? Well thanks for asking, I love wonderful questions like that!
-A trajectory is basically a giant list of waypoints. Well... what are waypoints? Another excellent 
-question! Waypoints describe the desired state of the robot during a path (ex. Desired velocity, 
-acceleration, position, etc).
+A trajectory is basically a long list of waypoints. Waypoints describe the desired state 
+of the robot during a path (ex. Desired velocity, acceleration, position, etc).
+
+Following the path
+------------------
 
 Next, you need to make the chassis follow the path like this: 
 
@@ -104,5 +104,4 @@ After deploying the code, go to the "Main" tab in shuffleboard and select Test S
 whatever you named your sequence). When you press ENABLE, the robot will follow the path. 
 
 .. note::
-    You must shout "ENABLED" loud and clear when you enable the robot. If you do not, consequences
-    will follow. This is for your wellbeing and safety.
+    You must shout "ENABLED" loud and clear when you enable the robot. 

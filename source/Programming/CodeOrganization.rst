@@ -2,16 +2,15 @@
 Code Organization
 #################
 
-Before we begin with actual programming, first you need to understand how Raid One and Raid 
-Zero code is organized. 
+Before we begin with actual programming, first you need to understand how Raid One (and Raid 
+Zero) code is organized. 
 
 Submodules
 ==========
 
-Every submodule in should be organized in its own class which inherits from the Submodule 
-class. For your custom features to work, you need to override methods from the Submodule class
-and create your custom features. Here are brief explainations of what each method in 
-submodule does: 
+Every submodule should be organized in its own class which inherits from the Submodule 
+class. For your custom features to work, you need to override methods from the Submodule class. 
+Here are brief explainations of what each method in submodule does: 
 
 On Init
 *******
@@ -84,7 +83,7 @@ Zero
 This method zeros all sensors. 
 
 .. note:: 
-    When you make a new submodule, you must add it to ``Robot.java``, in this place: 
+    When you make a new submodule, you must add it to ``Robot.java``: 
 
     .. code-block:: java
         :emphasize-lines: 6

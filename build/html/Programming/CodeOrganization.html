@@ -173,14 +173,13 @@
             
   <div class="section" id="code-organization">
 <h1>Code Organization<a class="headerlink" href="#code-organization" title="Permalink to this headline">¶</a></h1>
-<p>Before we begin with actual programming, first you need to understand how Raid One and Raid
-Zero code is organized.</p>
+<p>Before we begin with actual programming, first you need to understand how Raid One (and Raid
+Zero) code is organized.</p>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-<p>Every submodule in should be organized in its own class which inherits from the Submodule
-class. For your custom features to work, you need to override methods from the Submodule class
-and create your custom features. Here are brief explainations of what each method in
-submodule does:</p>
+<p>Every submodule should be organized in its own class which inherits from the Submodule
+class. For your custom features to work, you need to override methods from the Submodule class.
+Here are brief explainations of what each method in submodule does:</p>
 <div class="section" id="on-init">
 <h3>On Init<a class="headerlink" href="#on-init" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nd">@Override</span>
@@ -234,7 +233,7 @@ it is basically identical to <code class="docutils literal notranslate"><span cl
 <p>This method zeros all sensors.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When you make a new submodule, you must add it to <code class="docutils literal notranslate"><span class="pre">Robot.java</span></code>, in this place:</p>
+<p>When you make a new submodule, you must add it to <code class="docutils literal notranslate"><span class="pre">Robot.java</span></code>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">robotInit</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Register all submodules here</span>

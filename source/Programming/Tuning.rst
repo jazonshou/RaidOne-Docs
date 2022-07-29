@@ -70,5 +70,3 @@ current position and corrects its velocities based on the calculated error.
 
 
 To add RAMSETE, go to ``TrajectoryFollower.java``, and uncomment line 61 and comment line 62. 
-
-.. image:: ../images/ramsete.jpg

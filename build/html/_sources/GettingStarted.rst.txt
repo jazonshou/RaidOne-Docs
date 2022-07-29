@@ -7,8 +7,6 @@ Getting Started
 Helpful Resources
 =================
 
-Here are some helpful resources.
-
 * `WPILib <https://docs.wpilib.org/en/stable/index.html>`_: Everything programming 
   & electrical related is explained in detail here.
 * `WPILib API <https://first.wpi.edu/wpilib/allwpilib/docs/release/java/index.html>`_: Documents

@@ -220,19 +220,21 @@ desired velocity when the robot reaches that waypoint).</p></li>
 <p>Now, lets make the robot follow the path. For the sake of demonstration purposes, I will be
 using TestSequence.java to follow the path.</p>
 <p>First, you must load the path into the sequence with this:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Trajectory</span> <span class="n">MY_PATH</span> <span class="o">=</span> <span class="n">PathPlanner</span><span class="p">.</span><span class="na">loadPath</span><span class="p">(</span><span class="s">&quot;PATH_NAME&quot;</span><span class="p">,</span> <span class="n">AutoConstants</span><span class="p">.</span><span class="na">MAX_VEL</span><span class="p">,</span> <span class="n">AutoConstants</span><span class="p">.</span><span class="na">MAX_ACCEL</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Trajectory</span> <span class="n">MY_PATH</span> <span class="o">=</span>
+    <span class="n">PathPlanner</span><span class="p">.</span><span class="na">loadPath</span><span class="p">(</span><span class="s">&quot;PATH_NAME&quot;</span><span class="p">,</span> <span class="n">AutoConstants</span><span class="p">.</span><span class="na">MAX_VEL</span><span class="p">,</span> <span class="n">AutoConstants</span><span class="p">.</span><span class="na">MAX_ACCEL</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Change PATH_NAME to the name of the path you want to load.</p>
+<p>Change <code class="docutils literal notranslate"><span class="pre">PATH_NAME</span></code> to the name of the path you want to load.</p>
 </div>
-<div class="section" id="hold-on-wait-a-minute">
-<h3>Hold on, wait a minute…<a class="headerlink" href="#hold-on-wait-a-minute" title="Permalink to this headline">¶</a></h3>
-<p>What is a Trajectory I hear you ask? Well thanks for asking, I love wonderful questions like that!
-A trajectory is basically a giant list of waypoints. Well… what are waypoints? Another excellent
-question! Waypoints describe the desired state of the robot during a path (ex. Desired velocity,
-acceleration, position, etc).</p>
+<div class="section" id="what-is-a-trajectory">
+<h3>What is a trajectory?<a class="headerlink" href="#what-is-a-trajectory" title="Permalink to this headline">¶</a></h3>
+<p>A trajectory is basically a long list of waypoints. Waypoints describe the desired state
+of the robot during a path (ex. Desired velocity, acceleration, position, etc).</p>
+</div>
+<div class="section" id="following-the-path">
+<h3>Following the path<a class="headerlink" href="#following-the-path" title="Permalink to this headline">¶</a></h3>
 <p>Next, you need to make the chassis follow the path like this:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sequence</span><span class="p">()</span> <span class="p">{</span>
@@ -263,8 +265,7 @@ point A to point B, your second path MUST start from point B.</p>
 whatever you named your sequence). When you press ENABLE, the robot will follow the path.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You must shout “ENABLED” loud and clear when you enable the robot. If you do not, consequences
-will follow. This is for your wellbeing and safety.</p>
+<p>You must shout “ENABLED” loud and clear when you enable the robot.</p>
 </div>
 </div>
 </div>
